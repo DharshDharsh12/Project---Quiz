@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <section class="wrapper" id="wrapper">
+    <div id="start-screen" class="wrapper-screen">
+      <h1 data-text="Welcome to the Quiz!">Welcome to the Quiz!</h1>
+      <button id="start-button" class="start-button" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="quiz-screen" class="wrapper-quiz-screen">
+      <div class="page-left-side">
+        <img class="menu-image" src="menu.png" id="showOnClick">
+        <div class="menu-options" id="hideOn">
+          <button onclick="hideOptions()">Close</button>
+          <ul>
+            <li>Home</li>
+            <li>Quiz 1</li>
+            <li>Quiz 2</li>
+            <li>Score</li>
+          </ul>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+
+      </div>
+
+      <div class="page-main">
+        <p>General Knowledge</p>
+        <div class="timer-display" id="timer-display"></div>
+        <div class="quiz-wrapper" id="quizWrapper">
+          <div class="question-image" id="questionImage"></div>
+          <div class="question-tag">
+            <p id="question-paragraph"></p>
+            <div id="options-list"></div>
+          </div>
+        </div>
+        <form id="quiz-form">
+          <button id="submit-button" type="button">Submit</button>
+          <div id="result">
+            <!-- <img src="image.jpg" width="200px" height="200px"> -->
+            <br>
+          </div>
+        </form>
+        <div id="confirm-box">
+          <p>Do you really want to submit the answers?</p>
+          <button id="confirm-yes" style="background-color: green;">Yes, Submit</button>
+          <button id="confirm-no" style="background-color: red;">No, Go Back</button>
+        </div>
+
+      </div>
+
+      <div class="wrapper-screen" id="result-screen" style="display: none;">
+        <h2>Your Result</h2>
+        <p id="final-result"></p>
+        <div class="container">
+          <div class="circular-progress">
+            <span class="progress-value">0%</span>
+          </div>
+        </div>
+      </div>
+
+  </section>
+</body>
+
+<script src="script.js"></script>
+
+</html>
